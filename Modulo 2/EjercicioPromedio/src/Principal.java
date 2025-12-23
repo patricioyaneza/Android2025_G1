@@ -7,6 +7,9 @@ public class Principal {
 		double nota2 = 0;
 		double nota3 = 0;
 		double promedio = 0;		
+// case sensitive ( distingue las mayusculas de las minusculas) 
+		String nombre2 = "";
+		String Nombre2 = "";
 			
 		// permite leer el teclado
 		Scanner leer = new Scanner(System.in);
