@@ -32,13 +32,13 @@ public class Principal {
 		System.out.println("El resultado de la división es: " + division);
 
 		multiplicacion = valor1 * valor2;
-		System.out.println("El resultado de la multiplicación es: " + multiplicacion);
+		System.out.println("El resultado de la multiplicación es: " + 
+							multiplicacion);
 
 		num1++;
 		System.out.println("El valor de num1 aumentado es: " + num1);
 
 		leer.close();
-
 	}
-
+	
 }
