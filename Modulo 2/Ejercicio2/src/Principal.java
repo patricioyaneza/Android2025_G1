@@ -1,8 +1,10 @@
 import java.util.Scanner;
-public class Principal {
 
+public class Principal {
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		double nota1 = 0;
 		double nota2 = 0;
 		double nota3 = 0;
@@ -24,5 +26,24 @@ public class Principal {
 		// suma las notas y lo divide por 3
 		promedio = (nota1+nota2+nota3) / 3;
 		System.out.println("El resultado es: " + promedio);
+		
+		
+		
+		// valor contante
+		final double IVA = 1.19;
+		
+		System.out.println("El valor con IVA es: " + (1000*IVA));
+		
+		// IVA = 1.2; // lanza un error, no puede ser modificado
+		
+		int num1 = 2;
+		System.out.println("valor de num1: " + num1);
+		num1++;		
+		System.out.println("valor de num1: " + num1);
+		num1--;
+		System.out.println("valor de num1: " + num1);
+		
+		
+		
 	}
 }
