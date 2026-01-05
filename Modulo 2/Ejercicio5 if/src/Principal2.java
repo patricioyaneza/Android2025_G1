@@ -20,7 +20,6 @@ public class Principal2 {
 		} else {
 			System.out.println("Eres de tercera edad.");
 		}
-
+		
 	}
-
 }
