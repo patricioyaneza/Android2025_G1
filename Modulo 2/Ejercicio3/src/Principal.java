@@ -39,6 +39,7 @@ public class Principal {
 		System.out.println("El valor de num1 aumentado es: " + num1);
 
 		leer.close();
+
 	}
 	
 }
