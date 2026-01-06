@@ -13,7 +13,6 @@ public class Principal7 {
 		y "encender" el dispositivo solicitado.
 
 
-
 		*/
 
 		Scanner entrada = new Scanner(System.in);
