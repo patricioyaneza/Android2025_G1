@@ -41,7 +41,7 @@ public class Principal7 {
 			System.out.println(artefacto + " ha sido encendido");
 			break;
 		default:
-			System.out.println("No exist artefato");
+			System.out.println("No existe artefacto");
 
 		}
 		System.out.println("fin");
