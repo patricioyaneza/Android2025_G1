@@ -32,7 +32,15 @@ public class Principal5 {
 				
 		}
 		System.out.println("fin");
-		
+		/*
+		Ejercicio:
+		Solicitar al usuario un nunero de mes
+		mostrar el mes que corresponde a ese numero
+		Usar switch para establecer los casos
+		Mostrar error si el numero no es del 1 al 12.
+
+		*/
+
 	}
 
 }
