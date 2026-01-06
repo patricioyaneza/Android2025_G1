@@ -3,7 +3,7 @@ public class Principal5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int dia = 3;  // lunes 1 ... dom 7
+		int dia = 7;  // lunes 1 ... dom 7
 		
 		switch(dia) {
 		case 1:
@@ -27,7 +27,9 @@ public class Principal5 {
 		case 7:
 			System.out.println("Domingo");
 			break;
-			
+		default:
+			System.out.println("Día no válido");
+				
 		}
 		System.out.println("fin");
 		
