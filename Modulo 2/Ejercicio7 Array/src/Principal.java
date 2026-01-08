@@ -27,6 +27,15 @@ public class Principal {
 		
 		System.out.println("Matriz: " + matriz[1][0]);
 		
+		/*
+		 * Crear un arreglo para 5 nombres
+		 * solicitar al usuario ingresarlos
+		 * guardar en el arreglo, todos en mayusculas
+		 * 
+		 * 
+		 */
+		
+		
 		
 	}
 
