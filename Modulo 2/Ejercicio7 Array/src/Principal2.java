@@ -37,6 +37,9 @@ public class Principal2 {
 		 * 
 		 *  ana  ==>  perez
 		 *  ignacia ==> Diaz
+		 *  
+		 *  mostrar el nombre y el apellido guardo en cada arreglo
+		 *  
 		 */
 	}
 
