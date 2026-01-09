@@ -32,7 +32,12 @@ public class Principal {
 		 *  9200350-7  =>  9200350
 		 */
 		
-		
+		/*
+
+			nombre separar de acuerdo a los espacios
+
+			ultimos 4 digitos del rut
+		*/
 	}
 
 }
