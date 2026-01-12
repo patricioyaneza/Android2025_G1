@@ -24,7 +24,7 @@ public class Principal {
 		System.out.println("Cant de elementos: " + numeros.length);
 		
 		int [][] matriz = { {1,2,3}, {9,8,7}};
-		
+		int [][] matriz2 = new int [10][5];
 		System.out.println("Matriz: " + matriz[1][0]);
 		
 		/*

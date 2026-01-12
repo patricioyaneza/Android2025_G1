@@ -32,13 +32,14 @@ public class Principal2 {
 		System.out.println("==> 5: " + nombres[4]);
 		
 		/*
-		 *  para cada nombre guardar en una matriz el nombre y el
+		 *  para cada nombre (5) guardar en una matriz el nombre y el
 		 *  apellido
 		 * 
 		 *  ana  ==>  perez
 		 *  ignacia ==> Diaz
 		 *  
-		 *  mostrar el nombre y el apellido guardo en cada arreglo
+		 *  mostrar el nombre y el apellido guardo en la matriz de forma
+		 *  ordenada
 		 *  
 		 */
 	}
