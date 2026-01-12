@@ -18,7 +18,7 @@ public class Principal {
 		// ????
 		for(int indice = 0; indice < numeros.length; indice++)
 		{
-			System.out.println("Valor: " + numeros[indice]);
+			System.out.println("Valor " + (indice+1) + ": "+  numeros[indice]);
 		}
 		
 		
