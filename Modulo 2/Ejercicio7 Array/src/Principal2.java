@@ -32,7 +32,7 @@ public class Principal2 {
 		System.out.println("==> 5: " + nombres[4]);
 		
 		/*
-		 *  para cada nombre guardar en otro arreglo el
+		 *  para cada nombre guardar en una matriz el nombre y el
 		 *  apellido
 		 * 
 		 *  ana  ==>  perez
@@ -42,5 +42,13 @@ public class Principal2 {
 		 *  
 		 */
 	}
+
+/*
+
+ Ejercicio 16:
+Solicitar al usuario la cantidad de notas a ingresar y promediarlas, mostrar si aprobo o no
+
+*/
+
 
 }

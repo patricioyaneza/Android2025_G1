@@ -36,7 +36,7 @@ public class Principal {
 
 			nombre separar de acuerdo a los espacios
 
-			ultimos 4 digitos del rut
+			ultimos 4 digitos del rut para ingresar como clave 
 		*/
 	}
 
