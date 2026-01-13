@@ -17,7 +17,11 @@ public class Principal5 {
 			
 			if(opcion == 0)
 				break;
-			
+/*
+ *  Solicitar 2 numeros y sumar o restar de acuerdo a lo que el 
+ *  usuario seleccionó
+ * 			
+ */
 			if(opcion == 1)
 			{
 				System.out.println("===== Sumar ======");
