@@ -34,9 +34,13 @@ public class Principal5 {
 			if(opcion == 0)
 				break;		
 /*
+ * Ejercicio 15:
  *  Solicitar 2 numeros y sumar o restar de acuerdo a lo que el 
  *  usuario seleccionó
- * 			
+ * 	
+ * 
+ * Ejercicio 16:
+ * agregar multiplicación y división.   
  */
 			System.out.println("Ingrese primer número");
 			num1 = leer.nextInt();
