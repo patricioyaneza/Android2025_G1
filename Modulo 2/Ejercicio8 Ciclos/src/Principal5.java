@@ -41,6 +41,7 @@ public class Principal5 {
  * 
  * Ejercicio 16:
  * agregar multiplicación y división.   
+ * Validar que en la división el divisor no sea cero
  */
 			System.out.println("Ingrese primer número");
 			num1 = leer.nextInt();
