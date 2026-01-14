@@ -103,5 +103,11 @@ public class Principal5 {
 		return resultado;
 	}
 	
-
+/*
+ *  java --version  (PATH)
+ *  
+ *  java -jar ruta.jar
+ * 
+ * 
+ */
 }
