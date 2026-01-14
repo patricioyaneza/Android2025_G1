@@ -86,7 +86,7 @@ public class Principal5 {
 			else if(opcion == 5)
 			{
 				System.out.println("===== Potencia ======");
-				resultado = (int)obtenerPotencia(num1, num2);
+				resultado = (int) obtenerPotencia(num1, num2); // parseInt 
 			}
 			System.out.println("El resultado es: " + resultado);	
 			System.out.println("Presione enter para continuar...");
