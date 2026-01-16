@@ -23,6 +23,9 @@ public class Pricipal {
 		vehiculo1.imprimir();
 		vehiculo2.imprimir();
 		
+		// ArrayList 
+		 
+		
 	}
 
 }
