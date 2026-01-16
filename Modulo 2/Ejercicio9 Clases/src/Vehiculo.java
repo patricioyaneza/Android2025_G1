@@ -25,10 +25,10 @@ public class Vehiculo {
 	// private // no se puede acceder cuando se presiona el punto (objeto) 
 	public void imprimir()
 	{
-		System.out.println("\n======== Datos del objeto ========");
+		System.out.println("\n======== Datos del Automóvil ========");
 		System.out.println("Patente : " + this.patente);
 		System.out.println("Marca   : " + this.marca);
-		System.out.println("Color   : " + this.color);
+		System.out.println("Color   : " + this.color);		
 	}
 	
 }

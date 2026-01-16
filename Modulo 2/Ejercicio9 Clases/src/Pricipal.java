@@ -16,14 +16,12 @@ public class Pricipal {
 		marca = leer.next();
 		System.out.print("Ingrese color: ");
 		color = leer.next();
-		
-		Vehiculo vehiculo1 = new Vehiculo(patente, marca, color);
-		
+
+		Vehiculo vehiculo1 = new Vehiculo(patente, marca, color);		
 		Vehiculo vehiculo2 = new Vehiculo("as7010", "Fiat", "Rojo");
 		
 		vehiculo1.imprimir();
 		vehiculo2.imprimir();
-		
 		
 	}
 
