@@ -23,9 +23,21 @@ public class Pricipal {
 		vehiculo1.imprimir();
 		vehiculo2.imprimir();
 		
-		// ArrayList 
-		 
+		// Colecciones:  ArrayList
 		
+		Vehiculo vehiculo3 = new Vehiculo();
+		vehiculo3.imprimir();
+		vehiculo3.setPatente("KPLT40");
+		vehiculo3.setMarca("BWM");
+		vehiculo3.setColor("Blanco");
+		vehiculo3.imprimir();
+		
+		vehiculo2.setPatente("AF7010");
+		vehiculo2.imprimir();
 	}
-
+/*
+ * 
+ * 
+ * 
+ */
 }
