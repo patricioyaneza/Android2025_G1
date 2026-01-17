@@ -36,7 +36,7 @@ public class Pricipal {
 		vehiculo2.imprimir();
 	}
 /*
- * 
+ * Agregar a la clase Cuenta getter and setter, encapsular, modificar datos del obj
  * 
  * 
  */
