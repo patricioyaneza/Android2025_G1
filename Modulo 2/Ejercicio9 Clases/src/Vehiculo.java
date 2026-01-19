@@ -5,6 +5,7 @@ public class Vehiculo {
 	private String patente; // AS7840    JGGG45
 	private String marca;
 	private String color;
+
 //	int puertas;private 
 //	int precioCosto;
 //	int precioVenta;

@@ -23,6 +23,7 @@ public class Pricipal {
 		vehiculo1.imprimir();
 		vehiculo2.imprimir();
 		
+		
 		// Colecciones:  ArrayList
 		
 		Vehiculo vehiculo3 = new Vehiculo();

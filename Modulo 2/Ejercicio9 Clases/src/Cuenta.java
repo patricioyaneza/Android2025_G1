@@ -1,5 +1,6 @@
 
 public class Cuenta {
+	
 	int numeroCuenta;
 	String titular;
 	double saldo;

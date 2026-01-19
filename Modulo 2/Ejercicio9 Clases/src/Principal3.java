@@ -14,16 +14,22 @@ public class Principal3 {
 		System.out.println("ingrese numero de cuenta: ");
 		numeroCuenta = leer.nextInt();
 		System.out.println("ingrese nombre titular: ");
-		titular = leer.next();
+		titular = leer.nextLine();
+		titular = leer.nextLine();
 		System.out.println("ingrese saldo cuenta: ");
 		saldo = leer.nextDouble();
 
-		Cuenta cuenta = new Cuenta(numeroCuenta, titular, saldo);
-/*
- * utilizar sin parametros y setter
+		
+/* Ejercicio:
+ * utilizar sin parametros y 
+ * modificar con setter
  * 
  */
-		cuenta.imprimir();
+		Cuenta2 cuenta2 = new Cuenta2();
+		cuenta2.setNumeroCuenta(numeroCuenta);
+		cuenta2.setTitular(titular);
+		cuenta2.setSaldo(saldo);
+		cuenta2.imprimir();
 
 		}
 }
