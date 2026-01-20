@@ -14,6 +14,20 @@ public class Principal {
 		System.out.println("***** AutoMotora Auto Feliz 😊 *******");
 		String infoVehiculo = moto.imprimir();
 		System.out.println(infoVehiculo);
+		
+		System.out.println(new Moto().imprimir());
+		
+		
+		/**
+		 *  Ejercicio 24:
+		 * Crear la clase Automovil Agregar 2 atributos adicionales
+		 * (cuenta con aire acondicionado, cantidad de puertas) 
+		 * Heredar de Vehiculo.
+		 * Crear un objeto Automovil, asignar datos y mostrar en consola
+		 * 
+		 * 
+		 */
+		
 	}
 
 }

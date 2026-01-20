@@ -31,7 +31,8 @@ public class Moto extends Vehiculo{
 		this.estilo = estilo;
 	}
 	
-	public String imprimir() {
+	@Override
+	public String imprimir() { // sobre escritura
 		// return super.imprimir();
 		
 		String respuesta =  "\nPatente         : " + getPatente() +
