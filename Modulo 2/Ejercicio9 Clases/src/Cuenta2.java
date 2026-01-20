@@ -1,4 +1,3 @@
-
 public class Cuenta2 {
 	private int numeroCuenta;
 	private String titular;
@@ -10,6 +9,7 @@ public class Cuenta2 {
 		this.titular = "";
 		this.saldo = 0;
 	}
+	
 	public Cuenta2(int numeroCuenta, String titular, double saldo)
 	{
 		this.numeroCuenta = numeroCuenta;
@@ -42,5 +42,5 @@ public class Cuenta2 {
 		System.out.println("titular: " + this.titular);
 		System.out.println("saldo: " + this.saldo);
 	}
-
 }
+
