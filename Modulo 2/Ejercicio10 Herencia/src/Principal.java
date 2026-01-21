@@ -27,7 +27,17 @@ public class Principal {
 		 * 
 		 * 
 		 */
-		
+		Automovil automovil = new Automovil();
+
+		automovil.setPatente("MY4527");
+		automovil.setMarca("Suzuki");
+		automovil.setModelo("Swift");
+		automovil.setAireAcondicionado(false);
+		automovil.setCantidadPuertas(5);
+
+		String infoVehiculo2 = automovil.imprimir();
+		System.out.println(infoVehiculo2);
+
 	}
 
 }
