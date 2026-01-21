@@ -38,6 +38,9 @@ public class Principal {
 		String infoVehiculo2 = automovil.imprimir();
 		System.out.println(infoVehiculo2);
 
+		Automovil automovil2 = new Automovil("TRPL45", "Peugeot", "208", true, 5);
+		System.out.println(automovil2.imprimir());
+		
 	}
 
 }

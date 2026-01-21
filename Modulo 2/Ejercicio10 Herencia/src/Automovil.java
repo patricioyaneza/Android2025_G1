@@ -7,11 +7,16 @@ public class Automovil extends Vehiculo {
 
 	// Constructores
 	public Automovil() { // new Automovil();
-		super();
+		super(); // invoca el constructor SIN parametros. 
 		this.aireAcondicionado = true;
 		this.cantidadPuertas = 3;
 	}
-
+	public Automovil(String patente, String marca, String modelo, boolean aireAcondicionado, int cantidadPuertas) { // new Automovil();
+		super(patente, marca, modelo); // invoca el constructor con parametros de la super clase
+		this.aireAcondicionado = true;
+		this.cantidadPuertas = cantidadPuertas;
+	}
+	
 	// Getter and Setter
 
 	public boolean isAireAcondicionado() {
