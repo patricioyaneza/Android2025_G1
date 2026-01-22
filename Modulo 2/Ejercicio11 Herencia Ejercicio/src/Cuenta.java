@@ -1,16 +1,16 @@
-public class Cuenta2 {
+public class Cuenta {
 	private int numeroCuenta;
 	private String titular;
 	private double saldo;
 
-	public Cuenta2() // new Cuenta2();
+	public Cuenta() // new Cuenta2();
 	{
 		this.numeroCuenta = 0;
 		this.titular = "";
 		this.saldo = 0;
 	}
 	
-	public Cuenta2(int numeroCuenta, String titular, double saldo)
+	public Cuenta(int numeroCuenta, String titular, double saldo)
 	{
 		this.numeroCuenta = numeroCuenta;
 		this.titular = titular;
@@ -41,6 +41,18 @@ public class Cuenta2 {
 		System.out.println("numeroCuenta: " + this.numeroCuenta);
 		System.out.println("titular: " + this.titular);
 		System.out.println("saldo: " + this.saldo);
+	}
+	
+	public void depositar(int monto)
+	{
+		this.saldo = this.saldo + monto;
+	}
+	public void retirar(int monto)
+	{
+		if(this.saldo >= monto)
+			this.saldo = this.saldo - monto;
+		else
+			System.out.println("No tiene saldo sufieciente.");
 	}
 }
 

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pricipal {
+public class Principal {
 
 	public static void main(String[] args) {
 
@@ -18,12 +18,12 @@ public class Pricipal {
 		titular = leer.nextLine();
 		System.out.println("ingrese saldo cuenta: ");
 		saldo = leer.nextDouble();
-
-		Cuenta2 cuenta2 = new Cuenta2();
-		cuenta2.setNumeroCuenta(numeroCuenta);
-		cuenta2.setTitular(titular);
-		cuenta2.setSaldo(saldo);
-		cuenta2.imprimir();
+/*   la cuenta siempre esta en pesos */
+		Cuenta cuenta = new Cuenta();
+		cuenta.setNumeroCuenta(numeroCuenta);
+		cuenta.setTitular(titular);
+		cuenta.setSaldo(saldo);
+		cuenta.imprimir();
 
 		
 	}
