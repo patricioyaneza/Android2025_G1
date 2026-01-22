@@ -25,7 +25,7 @@ public class Principal {
 		cuenta.setSaldo(saldo);
 		cuenta.imprimir();
 
-// inteface // prueba unitarias.		
+// inteface // prueba unitarias. // revis	
 		
 	}
 
