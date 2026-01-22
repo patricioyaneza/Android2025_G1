@@ -42,9 +42,9 @@ public class Automovil extends Vehiculo {
 							"\nMarca               : " + getMarca() + 
 							"\nModelo              : " + getModelo() +
 							"\nAire Acondicionado  : " + (this.aireAcondicionado?"Si":"No") + 
-							"\nCantidad de puertas : " + this.cantidadPuertas;
-		
+							"\nCantidad de puertas : " + this.cantidadPuertas;		
 		// mini ejercicio: cambiar el t/f por si/no
 		return respuesta;
 	}
+
 }
