@@ -57,6 +57,12 @@ public class CuentaUSD extends Cuenta {
 		super.retirar((int)totalPeso);
 	}
 
-	
+	public void enviarCartola()
+	{
+		System.out.println("\n\n********* Cartola de Cuenta *******");
+		System.out.println(" Cuenta       : " + getNumeroCuenta());
+		System.out.println(" Saldo Actual : " + this.saldo);
+		System.out.println("***********************************");
+	}
 	
 }

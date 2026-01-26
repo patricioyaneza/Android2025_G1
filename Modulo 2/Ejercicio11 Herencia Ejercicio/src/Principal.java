@@ -37,6 +37,9 @@ public class Principal {
 		cuentaDolar.imprimir();
 		cuentaDolar.retirar(100);
 		cuentaDolar.imprimir();
+		
+		cuentaDolar.enviarCartola();
+		
 // inteface // prueba unitarias. // revis	
 		
 	}
