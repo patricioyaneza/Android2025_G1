@@ -1,7 +1,7 @@
 public class Cuenta {
 	private int numeroCuenta;
 	private String titular;
-	private double saldo;
+	protected double saldo;
 
 	public Cuenta() // new Cuenta2();
 	{
@@ -38,9 +38,9 @@ public class Cuenta {
 	public void imprimir()
 	{
 		System.out.println("Datos de la cuenta");
-		System.out.println("numeroCuenta: " + this.numeroCuenta);
-		System.out.println("titular: " + this.titular);
-		System.out.println("saldo: " + this.saldo);
+		System.out.println("Número Cuenta : " + this.numeroCuenta);
+		System.out.println("Titular       : " + this.titular);
+		System.out.println("Saldo         : " + this.saldo);
 	}
 	
 	public void depositar(int monto)

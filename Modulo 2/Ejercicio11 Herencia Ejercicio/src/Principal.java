@@ -11,20 +11,32 @@ public class Principal {
 		double saldo;
 
 		System.out.println("\n===== Ingrese datos de la cuenta =====");
-		System.out.println("ingrese numero de cuenta: ");
+		System.out.print("ingrese numero de cuenta: ");
 		numeroCuenta = leer.nextInt();
-		System.out.println("ingrese nombre titular: ");
+		System.out.print("ingrese nombre titular: ");
 		titular = leer.nextLine();
 		titular = leer.nextLine();
-		System.out.println("ingrese saldo cuenta: ");
+		System.out.print("ingrese saldo cuenta: ");
 		saldo = leer.nextDouble();
 /*   la cuenta siempre esta en pesos */
+		
 		Cuenta cuenta = new Cuenta();
+		
 		cuenta.setNumeroCuenta(numeroCuenta);
 		cuenta.setTitular(titular);
 		cuenta.setSaldo(saldo);
 		cuenta.imprimir();
 
+		CuentaUSD cuentaDolar = new CuentaUSD();
+		cuentaDolar.setNumeroCuenta(9999);
+		cuentaDolar.setTitular("Andrea");
+		cuentaDolar.setSaldo(0);
+		cuentaDolar.setValorDolar(862);
+		cuentaDolar.depositar(100);// 25
+		cuentaDolar.depositar(50); // 26
+		cuentaDolar.imprimir();
+		cuentaDolar.retirar(100);
+		cuentaDolar.imprimir();
 // inteface // prueba unitarias. // revis	
 		
 	}
