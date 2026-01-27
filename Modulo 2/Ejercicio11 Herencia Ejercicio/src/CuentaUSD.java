@@ -64,5 +64,23 @@ public class CuentaUSD extends Cuenta {
 		System.out.println(" Saldo Actual : " + this.saldo);
 		System.out.println("***********************************");
 	}
+
+	@Override
+	public int guardar() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int modificar() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean eliminar() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 }

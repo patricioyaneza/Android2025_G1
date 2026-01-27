@@ -1,4 +1,4 @@
-public class Cuenta {
+public abstract class Cuenta implements IOperaciones, Valores {
 	private int numeroCuenta;
 	private String titular;
 	protected double saldo;
@@ -54,5 +54,7 @@ public class Cuenta {
 		else
 			System.out.println("No tiene saldo sufieciente.");
 	}
+
+
 }
 

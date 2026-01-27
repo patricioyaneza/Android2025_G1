@@ -20,13 +20,18 @@ public class Principal {
 		saldo = leer.nextDouble();
 /*   la cuenta siempre esta en pesos */
 		
-		Cuenta cuenta = new Cuenta();
 		
-		cuenta.setNumeroCuenta(numeroCuenta);
-		cuenta.setTitular(titular);
-		cuenta.setSaldo(saldo);
-		cuenta.imprimir();
-
+		/* 
+		 // da error si la clase Cuenta es ABSTRACTA
+		 
+			Cuenta cuenta = new Cuenta();
+			
+			cuenta.setNumeroCuenta(numeroCuenta);
+			cuenta.setTitular(titular);
+			cuenta.setSaldo(saldo);
+			cuenta.imprimir();
+		 */
+		
 		CuentaUSD cuentaDolar = new CuentaUSD();
 		cuentaDolar.setNumeroCuenta(9999);
 		cuentaDolar.setTitular("Andrea");
@@ -39,7 +44,7 @@ public class Principal {
 		cuentaDolar.imprimir();
 		
 		cuentaDolar.enviarCartola();
-		
+
 // inteface // prueba unitarias. // revis	
 		
 	}
