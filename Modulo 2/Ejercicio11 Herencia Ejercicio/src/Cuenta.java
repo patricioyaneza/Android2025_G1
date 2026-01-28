@@ -1,8 +1,9 @@
-public abstract class Cuenta implements IOperaciones, Valores {
+public abstract class Cuenta implements Valores, IOperaciones {
 	private int numeroCuenta;
 	private String titular;
 	protected double saldo;
 
+	 
 	public Cuenta() // new Cuenta2();
 	{
 		this.numeroCuenta = 0;

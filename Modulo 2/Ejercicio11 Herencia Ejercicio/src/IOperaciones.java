@@ -4,9 +4,9 @@ public interface IOperaciones {
 	Double IVA = 0.19;
 	double PI = 3.1415926535;
 	
-	
-	int guardar();
-	int modificar();
-	boolean eliminar();
+	// CRUD
+	int guardar(); // Create
+	int modificar(); // Update
+	boolean eliminar(); // Delete
 	
 }
