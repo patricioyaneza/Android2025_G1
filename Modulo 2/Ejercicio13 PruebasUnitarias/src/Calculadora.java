@@ -20,8 +20,7 @@ public class Calculadora {
 	}
 	public void setResultado(double resultado) {
 		this.resultado = resultado;
-	}
-	
+	}	
 	
 	public int sumar()
 	{
