@@ -32,7 +32,7 @@ class CalculadoraTest {
 	@Test
 	void mostrarValores() {
 		c.setValor1(10);
-		c.setValor2(6);
+		c.setValor2(5);
 		String valores = c.mostrar();
 		System.out.println("mostrarValores: " + valores);
 		assertEquals("Valor 1: 10 Valor 2: 5", valores, "Los valores mostrados no son correctos");
@@ -44,4 +44,18 @@ class CalculadoraTest {
 	 * crear 5 pruebas para el metodo dividir
 	 * 
 	 */
+	@Test
+	void restarResultadoCorrecto() {
+		c.setValor1(10);
+		c.setValor2(5);
+		double resultado = c.restar();
+		assertEquals(5, resultado, "La resta no es correcta");
+	}
+	
+	
+	
+	
+	
+	
+	
 }
