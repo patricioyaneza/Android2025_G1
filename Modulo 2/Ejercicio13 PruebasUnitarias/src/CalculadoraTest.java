@@ -51,13 +51,120 @@ class CalculadoraTest {
 		double resultado = c.restar();
 		assertEquals(5, resultado, "La resta no es correcta");
 	}
-	// yuioyuioyu
+	@Test
+	void restarResultadoInCorrecto() {
+		c.setValor1(10);
+		c.setValor2(5);
+		double resultado = c.restar();
+		assertNotEquals(0, resultado, "La resta no debe ser 0");
+	}
+	@Test
+	void restarConNegativos() {
+		c.setValor1(-10);
+		c.setValor2(-5);
+		double resultado = c.restar();
+		assertEquals(-5, resultado, "La resta con negativos no es correcta");
+	}
+	@Test
+	void restarCero() {
+		c.setValor1(0);
+		c.setValor2(5);
+		double resultado = c.restar();
+		assertEquals(-5, resultado, "La resta con cero no es correcta");
+	}
+	@Test
+	void restarCeroAmbos() {
+		c.setValor1(0);
+		c.setValor2(0);
+		double resultado = c.restar();
+		assertEquals(0, resultado, "La resta de cero y cero no es correcta");
+	}
 	
+	@Test
+	void restarPrimerNumeroNegativo() {
+		c.setValor1(-10);
+		c.setValor2(5);
+		double resultado = c.restar();
+		assertEquals(-15, resultado, "La resta con el primer numero negativo no es correcta");
+	}
 	
+	@Test
+	void multiplicarResultadoCorrecto() {
+		c.setValor1(10);
+		c.setValor2(5);
+		double resultado = c.multiplicar();
+		assertEquals(50, resultado, "La multiplicacion no es correcta");
+	}
+	@Test
+	void multiplicarResultadoInCorrecto() {
+		c.setValor1(10);
+		c.setValor2(5);
+		double resultado = c.multiplicar();
+		assertNotEquals(0, resultado, "La multiplicacion no debe ser 0");
+	}
+	@Test
+	void multiplicarConNegativos() {
+		c.setValor1(-10);
+		c.setValor2(-5);
+		double resultado = c.multiplicar();
+		assertEquals(50, resultado, "La multiplicacion con negativos no es correcta" + resultado);
+	}
+	@Test
+	void multiplicarCero() {
+		c.setValor1(0);
+		c.setValor2(5);
+		double resultado = c.multiplicar();
+		assertEquals(0, resultado, "La multiplicacion con cero no es correcta");
+	}
+	@Test
+	void multiplicarCeroAmbos() {
+		c.setValor1(0);
+		c.setValor2(0);
+		double resultado = c.multiplicar();
+		assertEquals(0, resultado, "La multiplicacion de cero y cero no es correcta");
+	}
 	
-	
-	
-	
-	
-	
+	@Test
+	void dividirResultadoCorrecto() {
+		c.setValor1(10);
+		c.setValor2(5);
+		double resultado = c.dividir();
+		assertEquals(2, resultado, "La division no es correcta");
+	}
+
+	@Test
+	void dividirPorCero() {
+		c.setValor1(10);
+		c.setValor2(0);
+		double resultado = c.dividir();
+		assertEquals(-1, resultado, "La division por cero no devuelve -1");
+	}
+	@Test
+	void dividirDivisorEsCero() {
+		c.setValor1(0);
+		c.setValor2(5);
+		double resultado = c.dividir();
+		assertEquals(0, resultado, "Cero entre un numero no devuelve 0");
+	}
+	@Test
+	void dividirConNegativos() {
+		c.setValor1(-10);
+		c.setValor2(-5);
+		double resultado = c.dividir();
+		assertEquals(2, resultado, "La division con negativos no es correcta");
+	}
+	@Test
+	void dividirDivisorNegativo() {
+		c.setValor1(10);
+		c.setValor2(-5);
+		double resultado = c.dividir();
+		assertEquals(-2, resultado, "La division con divisor negativo no es correcta");
+	}
+	@Test
+	void dividirDividendoNegativo() {
+		c.setValor1(-10);
+		c.setValor2(5);
+		double resultado = c.dividir();
+		assertEquals(-2, resultado, "La division con dividendo negativo no es correcta");
+	}
 }

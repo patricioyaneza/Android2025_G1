@@ -32,7 +32,7 @@ public class Calculadora {
 	}
 	public int multiplicar()
 	{
-		return this.valor1+this.valor2;
+		return this.valor1*this.valor2;
 	}
 	public double dividir()
 	{
