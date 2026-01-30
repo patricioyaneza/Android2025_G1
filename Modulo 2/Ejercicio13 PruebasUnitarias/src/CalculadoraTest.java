@@ -28,11 +28,20 @@ class CalculadoraTest {
 		System.out.println("sumarResultadoInCorrecto: " + resultado);
 		assertNotEquals(0, resultado);
 	}
+
+	@Test
+	void mostrarValores() {
+		c.setValor1(10);
+		c.setValor2(6);
+		String valores = c.mostrar();
+		System.out.println("mostrarValores: " + valores);
+		assertEquals("Valor 1: 10 Valor 2: 5", valores, "Los valores mostrados no son correctos");
+	}
 	
 	// Ejercicio 25:
 	/*
-	 * Crear 2 pruebas para restar, multiplicar
-	 * crear 3 pruebas para el metodo dividir
+	 * Crear 4 pruebas para restar, multiplicar
+	 * crear 5 pruebas para el metodo dividir
 	 * 
 	 */
 }

@@ -43,4 +43,10 @@ public class Calculadora {
 		
 		return this.valor1/this.valor2;
 	}
+	
+	public String mostrar()
+	{
+		return "Valor 1: " + this.valor1 + " Valor 2: " + this.valor2;
+	}
+	
 }
