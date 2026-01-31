@@ -38,6 +38,38 @@ class CalculadoraTest {
 		assertEquals("Valor 1: 10 Valor 2: 5", valores, "Los valores mostrados no son correctos");
 	}
 	
+	@Test
+	void mostrarValoresPositivos() {
+		c.setValor1(7);
+		c.setValor2(3);
+		String valores = c.mostrar();
+		assertEquals("Valor 1: 7 Valor 2: 3", valores, "El string mostrado no es correcto para valores positivos");
+	}
+	
+	@Test
+	void mostrarValoresNegativos() {
+		c.setValor1(-8);
+		c.setValor2(-4);
+		String valores = c.mostrar();
+		assertEquals("Valor 1: -8 Valor 2: -4", valores, "El string mostrado no es correcto para valores negativos");
+	}
+	
+	@Test
+	void mostrarValoresCero() {
+		c.setValor1(0);
+		c.setValor2(0);
+		String valores = c.mostrar();
+		assertEquals("Valor 1: 0 Valor 2: 0", valores, "El string mostrado no es correcto para valores cero");
+	}
+	
+	@Test
+	void mostrarValoresMixtos() {
+		c.setValor1(5);
+		c.setValor2(-3);
+		String valores = c.mostrar();
+		assertEquals("Valor 1: 5 Valor 2: -3", valores, "El string mostrado no es correcto para valores mixtos");
+	}
+	
 	// Ejercicio 25:
 	/*
 	 * Crear 4 pruebas para restar, multiplicar
@@ -166,5 +198,41 @@ class CalculadoraTest {
 		c.setValor2(5);
 		double resultado = c.dividir();
 		assertEquals(-2, resultado, "La division con dividendo negativo no es correcta");
+	}
+	
+	@Test
+	void sumarValoresNegativos() {
+		c.setValor1(-4);
+		c.setValor2(-6);
+		int resultado = c.sumar();
+		assertEquals(-10, resultado, "La suma de dos negativos no es correcta");
+	}
+	
+	@Test
+	void sumarPositivoNegativo() {
+		c.setValor1(8);
+		c.setValor2(-3);
+		int resultado = c.sumar();
+		assertEquals(5, resultado, "La suma de un positivo y un negativo no es correcta");
+	}
+	
+	@Test
+	void sumarAmbosCero() {
+		c.setValor1(0);
+		c.setValor2(0);
+		int resultado = c.sumar();
+		assertEquals(0, resultado, "La suma de dos ceros debe ser 0");
+	}
+	
+	@Test
+	void sumarUnValorCero() {
+		c.setValor1(0);
+		c.setValor2(7);
+		int resultado = c.sumar();
+		assertEquals(7, resultado, "La suma de cero y un positivo no es correcta");
+		c.setValor1(5);
+		c.setValor2(0);
+		resultado = c.sumar();
+		assertEquals(5, resultado, "La suma de un positivo y cero no es correcta");
 	}
 }
