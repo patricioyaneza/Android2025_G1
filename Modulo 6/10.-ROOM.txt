@@ -1,0 +1,150 @@
+agregar ROOM
+
+1.- EN ARCHIVO: gradle/libs.versions.toml
+
+toml
+[versions]
+# ... existing versions
+ksp = "2.0.21-1.0.26" # Add this (matches Kotlin 2.0.21)
+
+[libraries]
+# ... existing libraries
+
+[plugins]
+# ... existing plugins
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" } # Add this
+
+
+
+2.- EN ARCHIVO build.gradle.kts  (Proyect o TOP LEVEL )
+
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.kotlin.ksp) apply false // Add this line here
+}
+
+
+3.- EN ARCHIVO build.gradle.kts  (App o App LEVEL )
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.ksp) // Remove "apply false" to actually use it
+}
+
+
+ADEMAS  de
+
+dependencies {
+    // ... other dependencies
+
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    
+    // Remove or comment out kapt:
+    // kapt("androidx.room:room-compiler:$room_version") 
+
+    // Use ksp instead:
+    ksp("androidx.room:room-compiler:$room_version")
+
+    implementation("androidx.room:room-ktx:$room_version")
+}
+
+
+4.- CREAR paquete (carpeta)
+
+new --> Package 
+
+
+5.- Entity en carpeta para entidades (crear paquete model) -> Usuario.kt
+
+package com.example.proyecto8_sqlite.model
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "tabla_usuarios")
+data class Usuario(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val nombre: String,
+    val edad: Int
+)
+
+6.- Interface en carpeta DAO (crear paquete dao) -> UsuarioDao.kt
+
+package com.example.proyecto8_sqlite.dao
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.Query
+import com.example.proyecto8_sqlite.model.Usuario
+
+@Dao
+interface UsuarioDao {
+    @Insert
+    suspend fun insertar(usuario: Usuario)
+
+    @Query("SELECT * FROM tabla_usuarios")
+    suspend fun obtenerTodos(): List<Usuario>
+}
+
+7.- abstract class en carpeta DATA (crear paquete data) --> AppDatabase.kt
+
+
+package com.example.proyecto8_sqlite.data
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.example.proyecto8_sqlite.dao.UsuarioDao
+import com.example.proyecto8_sqlite.model.Usuario
+
+@Database(entities = [Usuario::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun usuarioDao(): UsuarioDao
+
+    companion object {
+        @Volatile
+        private var INSTANCE: AppDatabase? = null
+
+        fun getDatabase(context: Context): AppDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "usuarios_db"
+                ).build()
+                INSTANCE = instance
+                instance
+            }
+        }
+    }
+}
+
+8.- En el activity
+
+ // 1. Obtener la instancia de la base de datos
+        val db = AppDatabase.getDatabase(this)
+        val usuarioDao = db.usuarioDao()
+
+        // 2. Usar un Scope para ejecutar en segundo plano (Corrutina)
+//      import androidx.lifecycle.lifecycleScope
+//      import kotlinx.coroutines.launch
+
+                lifecycleScope.launch {
+
+            // --- OPERACIÓN 1: INSERTAR DATOS EN DURO ---
+            val usuarioDePrueba = Usuario(nombre = "Juana", apellido = "Pérez")
+            usuarioDao.insertar(usuarioDePrueba)
+            Log.d("SQLITE_DEBUG", "Usuario insertado correctamente")
+
+            // --- OPERACIÓN 2: LEER LOS DATOS PARA VERIFICAR ---
+            val listaUsuarios = usuarioDao.obtenerTodos()
+
+            // Imprimir en el Logcat para ver que funciona
+            for (u in listaUsuarios) {
+                Log.d("SQLITE_DEBUG", "ID: ${u.id} | Nombre: ${u.nombre} ${u.apellido}")
+            }
+        }
