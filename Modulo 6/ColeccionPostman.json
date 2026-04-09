@@ -1,0 +1,277 @@
+{
+  "info": {
+    "_postman_id": "f6583d6b-d478-46c7-bcd6-b047f47ffed2",
+    "name": "My Collection",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53870339",
+    "_collection_link": "https://go.postman.co/collection/53870339-f6583d6b-d478-46c7-bcd6-b047f47ffed2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Post data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "userId",
+              "value": "1",
+              "type": "text",
+              "uuid": "05c51e8e-495a-485e-b2bb-544576e10ec5"
+            },
+            {
+              "key": "userId",
+              "value": "101",
+              "type": "text",
+              "uuid": "e83d7709-8866-463b-adbf-ea29929a0a66",
+              "disabled": true
+            },
+            {
+              "key": "title",
+              "value": "Mi primer post",
+              "type": "text",
+              "uuid": "603ee89c-0c8d-48ee-8e0c-51c6d5f1bdff"
+            },
+            {
+              "key": "body",
+              "value": "ver si funciona correctamente",
+              "type": "text",
+              "uuid": "07a70f74-38e6-49f4-9c95-8b5102c8dd3e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/10/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "10",
+            "posts"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Post data 2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "userId",
+              "value": "1",
+              "type": "text",
+              "uuid": "05c51e8e-495a-485e-b2bb-544576e10ec5"
+            },
+            {
+              "key": "userId",
+              "value": "101",
+              "type": "text",
+              "uuid": "e83d7709-8866-463b-adbf-ea29929a0a66",
+              "disabled": true
+            },
+            {
+              "key": "title",
+              "value": "Mi primer post",
+              "type": "text",
+              "uuid": "603ee89c-0c8d-48ee-8e0c-51c6d5f1bdff"
+            },
+            {
+              "key": "body",
+              "value": "ver si funciona correctamente",
+              "type": "text",
+              "uuid": "07a70f74-38e6-49f4-9c95-8b5102c8dd3e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/2/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "2",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lista de usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "api de comida",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.themealdb.com/api/json/v1/1/categories.php",
+          "protocol": "https",
+          "host": [
+            "www",
+            "themealdb",
+            "com"
+          ],
+          "path": [
+            "api",
+            "json",
+            "v1",
+            "1",
+            "categories.php"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "simpsons",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://thesimpsonsapi.com/api/characters/1",
+          "protocol": "https",
+          "host": [
+            "thesimpsonsapi",
+            "com"
+          ],
+          "path": [
+            "api",
+            "characters",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "dolar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://mindicador.cl/api/dolar",
+          "protocol": "https",
+          "host": [
+            "mindicador",
+            "cl"
+          ],
+          "path": [
+            "api",
+            "dolar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Uf",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://mindicador.cl/api/uf",
+          "protocol": "https",
+          "host": [
+            "mindicador",
+            "cl"
+          ],
+          "path": [
+            "api",
+            "uf"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "euro",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://mindicador.cl/api/euro",
+          "protocol": "https",
+          "host": [
+            "mindicador",
+            "cl"
+          ],
+          "path": [
+            "api",
+            "euro"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
