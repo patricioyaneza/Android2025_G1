@@ -1,0 +1,33 @@
+framentLayout
+
+ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val btnHola = view.findViewById<Button>(R.id.btnHola)
+
+        btnHola.setOnClickListener {
+            Toast.makeText(
+                requireContext(),
+                "Hola desde el Fragment 2👋",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+
+
+activity
+agregar
+fragmentContainerView
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.testing.PrimerFragment"
+        android:layout_width="377dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.972" />

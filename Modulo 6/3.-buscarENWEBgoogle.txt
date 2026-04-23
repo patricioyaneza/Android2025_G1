@@ -1,0 +1,78 @@
+Manifest
+<uses-permission android:name="android.permission.INTERNET"/>
+
+activity MAIN
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/editBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe término de búsqueda"/>
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"/>
+
+</LinearLayout>
+
+JAVA
+EditText editBuscar;
+Button btnBuscar;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    editBuscar = findViewById(R.id.editBuscar);
+    btnBuscar = findViewById(R.id.btnBuscar);
+
+    btnBuscar.setOnClickListener(v -> {
+
+        String termino = editBuscar.getText().toString();
+
+        Intent intent = new Intent(MainActivity.this, ResultadoActivity.class);
+        intent.putExtra("busqueda", termino);
+
+        startActivity(intent);
+
+    });
+}
+
+
+
+Activity WEbView
+<WebView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+
+
+JAVA web
+WebView webView;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_resultado);
+
+    webView = findViewById(R.id.webView);
+
+    String termino = getIntent().getStringExtra("busqueda");
+
+    webView.getSettings().setJavaScriptEnabled(true);
+
+    String url = "https://www.google.com/search?q=" + termino;
+
+    webView.loadUrl(url);
+}

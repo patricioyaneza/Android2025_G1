@@ -1,0 +1,34 @@
+prueba unitaria:
+
+model o similar alojado en carpeta java/kotlin
+class Calculadora {
+    fun sumar(a: Int, b: Int): Int {
+        return a + b
+    }
+}
+
+
+
+en carpeta (test) agregar la clase siguiente:
+
+import org.junit.Assert.assertEquals
+import org.junit.Before
+import org.junit.Test
+
+class CalculadoraTest {
+
+    private lateinit var calculadora: Calculadora
+
+    // Arrange: preparar el entorno antes de cada test
+    @Before
+    fun setup() {
+        calculadora = Calculadora()
+    }
+
+    // Act + Assert: ejecutar y verificar el resultado
+    @Test
+    fun sumar_dosNumeros_retornaResultadoCorrecto() {
+        val resultado = calculadora.sumar(2, 3)
+        assertEquals(5, resultado)
+    }
+}

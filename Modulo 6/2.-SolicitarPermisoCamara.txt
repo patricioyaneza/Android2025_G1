@@ -1,0 +1,21 @@
+    private void solicitarPermiso() {
+
+        // Solo se pide permiso si la versión es >= Android 6 (API 23)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.CAMERA)
+                    == PackageManager.PERMISSION_GRANTED) {
+
+                Toast.makeText(this,
+                        "Permiso ya concedido",
+                        Toast.LENGTH_SHORT).show();
+
+            } else {
+
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.CAMERA},
+                        1);
+            }
+        }
+    }

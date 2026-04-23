@@ -130,7 +130,7 @@ abstract class AppDatabase : RoomDatabase() {
         val usuarioDao = db.usuarioDao()
 
         // 2. Usar un Scope para ejecutar en segundo plano (Corrutina)
-//      import androidx.lifecycle.lifecycleScope!
+//      import androidx.lifecycle.lifecycleScope
 //      import kotlinx.coroutines.launch
 
                 lifecycleScope.launch {

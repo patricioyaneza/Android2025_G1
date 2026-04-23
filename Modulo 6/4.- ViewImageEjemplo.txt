@@ -1,0 +1,10 @@
+ImageView
+
+guardar imagen res/drawable
+
+modificar prop srcCompat
+app:srcCompat="@drawable/miniandroid"
+       
+fondo
+ android:background="#CCCCCC"
+manipular tamaño de la imagen dentro del componente con la propiedad scaleType
